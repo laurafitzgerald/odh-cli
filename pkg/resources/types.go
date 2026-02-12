@@ -300,4 +300,52 @@ var (
 		Kind:     "ImageStreamTag",
 		Resource: "imagestreamtags",
 	}
+
+	// HTTPRoute is the Gateway API HTTPRoute resource (used for Ray dashboard routes).
+	HTTPRoute = ResourceType{
+		Group:    "gateway.networking.k8s.io",
+		Version:  "v1",
+		Kind:     "HTTPRoute",
+		Resource: "httproutes",
+	}
+
+	// Gateway is the Gateway API Gateway resource.
+	Gateway = ResourceType{
+		Group:    "gateway.networking.k8s.io",
+		Version:  "v1",
+		Kind:     "Gateway",
+		Resource: "gateways",
+	}
+
+	// Route is the OpenShift Route resource (exposes Gateway hostname).
+	Route = ResourceType{
+		Group:    "route.openshift.io",
+		Version:  "v1",
+		Kind:     "Route",
+		Resource: "routes",
+	}
+
+	// ServiceAccount is the core Kubernetes ServiceAccount resource.
+	ServiceAccount = ResourceType{
+		Group:    "",
+		Version:  "v1",
+		Kind:     "ServiceAccount",
+		Resource: "serviceaccounts",
+	}
+
+	// Certificate is the cert-manager Certificate CRD (used to detect cert-manager).
+	Certificate = ResourceType{
+		Group:    "cert-manager.io",
+		Version:  "v1",
+		Kind:     "Certificate",
+		Resource: "certificates",
+	}
+
+	// SelfSubjectAccessReview is the Kubernetes authorization SelfSubjectAccessReview resource.
+	SelfSubjectAccessReview = ResourceType{
+		Group:    "authorization.k8s.io",
+		Version:  "v1",
+		Kind:     "SelfSubjectAccessReview",
+		Resource: "selfsubjectaccessreviews",
+	}
 )
